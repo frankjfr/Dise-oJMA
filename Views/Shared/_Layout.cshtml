@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Menu.css" asp-append-version="true" />
+
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+               
+            </div>
+            <span class="logo_name">Laboratorio</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Examenes</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Examenes</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Examenes</a></li>
+                    <li><a href="#">Tipo 1</a></li>
+                    <li><a href="#">Tipo 2</a></li>
+                    <li><a href="#">Tipo 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-book-alt'></i>
+                        <span class="link_name">Ejemplo</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Ejemplo</a></li>
+                    <li><a href="#">Lab 1</a></li>
+                    <li><a href="#">Lab 2</a></li>
+                    <li><a href="#">Lab 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="link_name">Analisis</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Analisis</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link_name">Citas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Citas</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-plug'></i>
+                        <span class="link_name">Pacientes</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Pacientes</a></li>
+                    <li><a href="#">Pacientes</a></li>
+                    <li><a href="#">Pacientes</a></li>
+                    <li><a href="#">Pacientes</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-compass'></i>
+                    <span class="link_name">Explorar</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Explorar</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link_name">Historial</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Historial</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Configurar</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configurar</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img class="logo" src="/img/imgLogin/jmaLogo.png">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">
+                            @if (!string.IsNullOrEmpty(Context.Session.GetString("Usuario")))
+                            {
+                                <span>Bienvenido, @Context.Session.GetString("Usuario")</span>
+                                <a asp-controller="Login" asp-action="Logout" class="cerrar-sesion btn btn-danger btn-sm">Cerrar Sesión <i class='bx bx-log-out'></i></a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Login" asp-action="Index" class="btn btn-primary btn-sm">Iniciar Sesión</a>
+                            }
+                        </div>
+                        <div class="job">JMA LABS</div>
+                    </div>
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </section>
+
+    <!-- Aquí se renderiza el contenido de la vista principal -->
+ 
+
+    <script src="~/js/Menu.js"></script>
+
+</body>
+</html>

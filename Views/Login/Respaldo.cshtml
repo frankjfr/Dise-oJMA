@@ -1,0 +1,146 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/Login.css" />
+    <link rel="stylesheet" href="~/css/material-input.css" />
+</head>
+<body class="body-login">
+    <div class="container-form-login">
+        <div class="dynacorp">
+            <div class="dynacorp-up">
+                <div class="logo-dyna">
+                    <img src="~/icon/dyna.png" />
+                </div>
+                <div class="linea">
+                    <p>Freigt forwarding systems</p>
+                </div>
+            </div>
+            <div class="link">
+                <a href="#">www.dynacorp365.com</a>
+            </div>
+        </div>
+        <div class="form-login">
+            <form id="form1" asp-action="ValidaLogin">
+
+                <input type="text" name="ReturnUrl" @*value="@url"*@ hidden />
+
+                <div class="title-form">
+                    <h1>Iniciar sesión</h1>
+                </div>
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text" @* asp-for="Email"*@>
+                        <label class="material-label">Email</label>
+                    </div>
+                </div>
+
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text" @*asp-for="Password"*@>
+                        <label class="material-label">Contraseña</label>
+                    </div>
+                </div>
+
+                <div class="contraseña-olvidada">
+                    <div class="container-check">
+                        <input type="checkbox" id="check" />
+                        <label for="check">Recordarme</label>
+                    </div>
+
+                </div>
+
+                <div class="button-login">
+                    <button asp-controller="Dashboard" asp-action="Dashboard" class="entrar" type="submit">Entrar</button>
+                </div>
+
+                <div class="container-olvido">
+                    <a onclick="colapsar()" class="olvido" href="#">Olvidé mi contraseña</a>
+                </div>
+            </form>
+
+
+            <form id="form2" class="collapse">
+                <div class="title-form">
+                    <h1>Recuperar contraseña</h1>
+                    <p>Ingrese el correo electrónico que utiliza en esta pagina y le ayudaremos a crear una nueva contraseña.</p>
+                </div>
+
+
+
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text">
+                        <label class="material-label">Email</label>
+                    </div>
+                </div>
+
+                <div class="button-login">
+                    <button class="entrar" onclick="colapsar2()" type="submit">Siguiente</button>
+                </div>
+            </form>
+
+
+            <form id="form3" class="collapse">
+                <div class="title-form">
+                    <h1>Codigo de recuperación</h1>
+                    <p>Se le ha enviado un codigo de recuperación de contraseña a su correo electrónico, por favor ingreselo aquí.</p>
+                </div>
+
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text">
+                        <label class="material-label">Codigo</label>
+                    </div>
+                </div>
+
+                <div class="button-login">
+                    <button class="entrar" onclick="colapsar3()" type="submit">Siguiente</button>
+                </div>
+            </form>
+
+
+            <form id="form4" class="collapse">
+                <div class="title-form">
+                    <h1>Crear nueva contraseña</h1>
+
+                </div>
+
+
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text">
+                        <label class="material-label">Contraseña temporal</label>
+                    </div>
+                </div>
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text">
+                        <label class="material-label">Nueva Contraseña</label>
+                    </div>
+                </div>
+
+                <div class="form-email">
+                    <div class="material-textfield">
+                        <input class="material-input" placeholder=" " type="text">
+                        <label class="material-label">Confirmar contraseña</label>
+                    </div>
+                </div>
+
+                <div class="button-login">
+                    <button class="entrar" onclick="colapsar4()" type="submit">Siguiente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="~/js/Login.js"></script>
+</body>
+</html>
