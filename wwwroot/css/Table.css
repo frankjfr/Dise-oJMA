@@ -16,7 +16,7 @@
 
 
 main.table {
-	height: 90vh;
+	height: calc(100% - 105px);
 	background-color: #fff5;
 	backdrop-filter: blur(7px);
 	box-shadow: 0 .4rem .8rem #0005;
@@ -28,7 +28,7 @@ main.table {
 	width: 100%;
 	height: 10%;
 	background-color: #fff4;
-	padding: .8rem 2.2rem;
+	padding: .8rem 3.2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -37,7 +37,7 @@ main.table {
 
 	.table__header .input-group {
 		width: 35%;
-		height: 100%;
+		height: 80%;
 		background-color: #fff5;
 		padding: 0 .8rem;
 		border-radius: 2rem;
@@ -45,6 +45,7 @@ main.table {
 		justify-content: center;
 		align-items: center;
 		transition: .2s;
+		border: 1px solid #4285f4;
 	}
 
 		.table__header .input-group:hover {
@@ -71,7 +72,6 @@ main.table {
 	max-height: calc(89% - 1.6rem);
 	background-color: #fffb;
 	margin: .8rem auto;
-	border-radius: .6rem;
 	overflow: auto;
 	overflow: overlay;
 }
@@ -116,9 +116,8 @@ thead th {
 	position: sticky;
 	top: 0;
 	left: 0;
-	background-color: #d5d1defe;
+	background-color: #cfd4fd;
 	cursor: pointer;
-	text-transform: capitalize;
 }
 
 tbody tr:nth-child(even) {
@@ -210,7 +209,7 @@ thead th:hover {
 }
 
 thead th.active span.icon-arrow {
-	background-color: #6c00bd;
+	background-color: #4285f4;
 	color: #fff;
 }
 
@@ -219,7 +218,7 @@ thead th.asc span.icon-arrow {
 }
 
 thead th.active, tbody td.active {
-	color: #6c00bd;
+	color: #4285f4;
 }
 
 .export__file {
@@ -293,3 +292,67 @@ thead th.active, tbody td.active {
 		width: 2rem;
 		height: auto;
 	}
+
+/* Contenedor principal de la cabecera */
+.table__header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 10px;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+}
+
+/* Estilo del título con el icono */
+.table__title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+}
+
+	/* Estilo del icono */
+	.table__title i {
+		font-size: 24px;
+		color: #007bff;
+	}
+
+/* Contenedor de los botones */
+.table__buttons {
+	display: flex;
+	gap: 10px;
+}
+
+	/* Estilos para los botones */
+	.table__buttons button {
+		padding: 8px 16px;
+		font-size: 14px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+#new-btn {
+	background-color: #4285f4;
+	color: white;
+}
+
+#edit-btn {
+	background-color: #ffc107;
+	color: black;
+}
+
+#delete-btn {
+	background-color: #dc3545;
+	color: white;
+}
+
+/* Estilo cuando los botones están deshabilitados */
+button:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+}

@@ -2,28 +2,40 @@
 
 
 <main class="table" id="customers_table">
+
+    </div>
     <section class="table__header">
-        <h1>Pacientes</h1>
+        <div class="table__title">
+            <i class='bx bx-user'></i>
+            <span>Pacientes</span>
+        </div>
         <div class="input-group">
             <input type="search" placeholder="Buscar paciente...">
             <i class='bx bx-search'></i>
         </div>
-        <div class="export__file">
-            <label for="export-file" class="export__file-btn" title="Export File"><i class='bx bx-transfer'></i>
-</label>
+        <div class="table__buttons">
+            <button id="new-btn">Nuevo</button>
+            <button id="edit-btn" disabled>Editar</button>
+            <button id="delete-btn" disabled>Eliminar</button>
 
-            <input type="checkbox" id="export-file">
-            <div class="export__file-options">
-                <label>Export As &nbsp; &#10140;</label>                    
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File">
+                    <i class='bx bx-transfer'></i>
+                </label>
 
-                <label for="export-file" id="toPDF">PDF <img src="/img/dashboard/pdf.png" alt=""></label>
-                <label for="export-file" id="toJSON">JSON <img src="/img/dashboard/json.png" alt=""></label>
-                <label for="export-file" id="toCSV">CSV <img src="/img/dashboard/csv.png" alt=""></label>
-                <label for="export-file" id="toEXCEL">EXCEL <img src="/img/dashboard/excel.png" alt=""></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+
+                    <label for="export-file" id="toPDF">PDF <img src="/img/dashboard/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="/img/dashboard/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="/img/dashboard/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="/img/dashboard/excel.png" alt=""></label>
+                </div>
             </div>
         </div>
+       
     </section>
-    <h1>TEST</h1>
     <section class="table__body">
         <table>
             <thead>
@@ -139,7 +151,7 @@
                 </tr>
                 <tr>
                     <td> 9</td>
-                     <td> <img src="/img/dashboard/Alson GC.jpg" alt=""> Alson GC </td>
+                    <td> <img src="/img/dashboard/Alson GC.jpg" alt=""> Alson GC </td>
                     <td> Dhaka </td>
                     <td> 22 Dec, 2023 </td>
                     <td>

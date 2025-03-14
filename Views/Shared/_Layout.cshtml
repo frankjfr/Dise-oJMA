@@ -1,22 +1,40 @@
 ﻿<!DOCTYPE html>
-<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title> Drop Down Sidebar Menu | CodingLab </title>
     <link rel="stylesheet" href="style.css">
-    <!-- Boxiocns CDN Link -->
+    <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/Menu.css" asp-append-version="true" />
 
+   
 </head>
 <body>
+    <!-- Header fijo -->
+    <header class="header-bar">
+        <div class="logo">
+            <span class="title">JMA LABS</span>
+        </div>
+        <div class="user-info">
+            @if (!string.IsNullOrEmpty(Context.Session.GetString("Usuario")))
+            {
+                <img src="/img/imgLogin/jmaLogo.png" alt="Logo">
+
+                <span class="welcome-user">Bienvenido, @Context.Session.GetString("Usuario")</span>
+                <a asp-controller="Login" asp-action="Logout" class="logout"> <i class='bx bx-log-out'></i></a>
+            }
+            else
+            {
+                <a asp-controller="Login" asp-action="Index" class="logout">Iniciar Sesión</a>
+            }
+        </div>
+    </header>
+
     <div class="sidebar close">
         <div class="logo-details">
             <div class="home-content">
                 <i class='bx bx-menu'></i>
-               
             </div>
             <span class="logo_name">Laboratorio</span>
         </div>
@@ -43,21 +61,6 @@
                     <li><a href="#">Tipo 1</a></li>
                     <li><a href="#">Tipo 2</a></li>
                     <li><a href="#">Tipo 3</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class="iocn-link">
-                    <a href="#">
-                        <i class='bx bx-book-alt'></i>
-                        <span class="link_name">Ejemplo</span>
-                    </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Ejemplo</a></li>
-                    <li><a href="#">Lab 1</a></li>
-                    <li><a href="#">Lab 2</a></li>
-                    <li><a href="#">Lab 3</a></li>
                 </ul>
             </li>
             <li>
@@ -120,38 +123,20 @@
                     <li><a class="link_name" href="#">Configurar</a></li>
                 </ul>
             </li>
-            <li>
-                <div class="profile-details">
-                    <div class="profile-content">
-                        <img class="logo" src="/img/imgLogin/jmaLogo.png">
-                    </div>
-                    <div class="name-job">
-                        <div class="profile_name">
-                            @if (!string.IsNullOrEmpty(Context.Session.GetString("Usuario")))
-                            {
-                                <span>Bienvenido, @Context.Session.GetString("Usuario")</span>
-                                <a asp-controller="Login" asp-action="Logout" class="cerrar-sesion btn btn-danger btn-sm">Cerrar Sesión <i class='bx bx-log-out'></i></a>
-                            }
-                            else
-                            {
-                                <a asp-controller="Login" asp-action="Index" class="btn btn-primary btn-sm">Iniciar Sesión</a>
-                            }
-                        </div>
-                        <div class="job">JMA LABS</div>
-                    </div>
-                    
-                </div>
-            </li>
         </ul>
     </div>
+
     <section class="home-section">
         <main role="main">
             @RenderBody()
         </main>
     </section>
 
-    <!-- Aquí se renderiza el contenido de la vista principal -->
- 
+    <!-- Footer fijo -->
+    <footer class="footer">
+        <p>© 2025 JMA LABS - Todos los derechos reservados.</p>
+       
+    </footer>
 
     <script src="~/js/Menu.js"></script>
 

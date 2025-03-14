@@ -14,15 +14,18 @@ body{
     cursor:pointer;
 }
 
-.sidebar{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 260px;
-  background: white;
-  z-index: 100;
-  transition: all 0.5s ease;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #cfd4fd;
+    z-index: 100;
+    transition: all 0.5s ease;
+    height: calc(100vh - 40px);
+    margin-top: 40px;
+    border-right: 1px solid #b3baf2;
 }
 
 .cerrar-sesion{
@@ -73,9 +76,9 @@ body{
   list-style: none;
   transition: all 0.4s ease;
 }
-.sidebar .nav-links li:hover{
-  background: white;
-}
+    .sidebar .nav-links li:hover {
+        background: #cfd4fd;
+    }
 .sidebar .nav-links li .iocn-link{
   display: flex;
   align-items: center;
@@ -84,15 +87,15 @@ body{
 .sidebar.close .nav-links li .iocn-link{
   display: block
 }
-.sidebar .nav-links li i{
-  height: 50px;
-  min-width: 78px;
-  text-align: center;
-  line-height: 50px;
-  color: black;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.sidebar .nav-links li i {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .sidebar .nav-links li.showMenu i.arrow{
   transform: rotate(-180deg);
@@ -115,11 +118,11 @@ body{
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .nav-links li .sub-menu{
-  padding: 6px 6px 14px 80px;
-  margin-top: -10px;
-  background: white;
-  display: none;
+.sidebar .nav-links li .sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #cfd4fd;
+    display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
   display: block;
@@ -147,11 +150,12 @@ body{
   pointer-events: none;
   transition: 0s;
 }
-.sidebar.close .nav-links li:hover .sub-menu{
-  top: 0;
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s ease;
+.sidebar.close .nav-links li:hover .sub-menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    background: #cfd4fd;
+    border: 1px solid #b3baf2;
 }
 .sidebar .nav-links li .sub-menu .link_name{
   display: none;
@@ -318,8 +322,80 @@ body{
     .home-section table th,
     .home-section table td {
         padding: 10px;
-        border: 1px solid #ddd;
+        
         text-align: left;
     }
 
+
+/* Estilos para la barra superior */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #cfd4fd;
+    color: #4285F4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #b3baf2;
+    z-index: 1000;
+    height:40px;
+}
+
+    .header-bar .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-bar img {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .header-bar .title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .header-bar .logout {
+        
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+.home-section {
+    margin-top: 60px; /* Para evitar que el contenido se superponga con el header */
+}
+
+.welcome-user {
+    color: #4285f4;
+    font-weight:bold;
+}
+
+.user-info{
+    display:flex;
+    align-items:center;
+}
+
+/* Estilos para el footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #cfd4fd;
+    color: #42474f;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 1px solid #b3baf2;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
