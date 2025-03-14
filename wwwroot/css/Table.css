@@ -279,7 +279,7 @@ thead th.active, tbody td.active {
 
 		.export__file .export__file-options label:first-of-type {
 			padding: 1rem 0;
-			background-color: #86e49d !important;
+			background-color: #4285f4  !important;
 		}
 
 		.export__file .export__file-options label:hover {
