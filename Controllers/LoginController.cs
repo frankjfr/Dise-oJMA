@@ -27,7 +27,7 @@ namespace JMA.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (model.Usuario == "Apple" && model.Clave == "jma123")
+                if (model.Usuario == "Francisco" && model.Clave == "jma123")
                 {
                     HttpContext.Session.SetString("Usuario", model.Usuario);
                     return RedirectToAction("Index", "Home");
