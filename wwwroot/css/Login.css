@@ -44,11 +44,11 @@ body {
 	z-index: 15;
 	position: relative;
 	background: #FFFFFF;
-	width: 600px;
+	width: 30vw;
+	max-height:max-content;
 	border-radius: 8px;
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 	box-sizing: border-box;
-	
 	overflow: hidden;
 }
 
@@ -133,11 +133,19 @@ body {
 	font-weight: 500;
 	line-height: inherit;
 	transition: 0.3s ease;
+	border: 1px solid #4285f48c;
+}
+
+.forgot-password {
+	background: white;
+	border-radius: 20px;
 }
 
 	.form-group input:focus {
 		color: rgba(0, 0, 0, 0.8);
 	}
+
+
 
 .two .form-group input {
 	color: #FFFFFF;

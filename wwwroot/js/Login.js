@@ -35,3 +35,17 @@ $(document).ready(function () {
     // Asegurarse de que la altura inicial del contenedor sea la correcta
     formContainer.css("height", panelOneHeight);
 });
+
+$(document).ready(function () {
+    $("#forgot-password-link").click(function (e) {
+        e.preventDefault();
+        $("#login-section").hide();
+        $("#forgot-password-section").show();
+    });
+
+    // Función para volver al login si deseas agregar un botón de "Volver"
+    $(document).on("click", "#back-to-login", function () {
+        $("#forgot-password-section").hide();
+        $("#login-section").show();
+    });
+});

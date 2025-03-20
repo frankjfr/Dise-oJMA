@@ -48,6 +48,7 @@ main.table {
 		justify-content: center;
 		align-items: center;
 		transition: .2s;
+		flex-wrap:nowrap;
 		border: 1px solid #4285f4;
 	}
 

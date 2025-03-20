@@ -37,14 +37,13 @@ namespace JMA.Controllers
             }
             else
             {
-                // Si la validación falla por no seleccionar empresa
                 if (model.EmpresaId == 0)
                 {
                     TempData["Error"] = "Debe seleccionar una empresa válida";
                 }
             }
 
-            // Si la validación falla, devolver el modelo con la lista de empresas
+            // Recargar la lista de empresas si hay error
             model.Empresas = new List<Empresa>
             {
                 new Empresa { Id = 1, Nombre = "Empresa A" },
@@ -59,6 +58,26 @@ namespace JMA.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Login");
+        }
+
+        // Acción para cargar la vista parcial de recuperación de contraseña
+        public IActionResult ForgotPasswordPartial()
+        {
+            return PartialView("_ForgotPasswordPartial", new ForgotPasswordModel());
+        }
+
+        // Acción para procesar la recuperación de contraseña
+        [HttpPost]
+        public IActionResult ForgotPassword(ForgotPasswordModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Simulación de envío de correo con instrucciones (luego se implementa correctamente)
+                TempData["SuccessMessage"] = "Se han enviado las instrucciones a su correo.";
+                return PartialView("_ForgotPasswordPartial", new ForgotPasswordModel()); // Limpiar el formulario
+            }
+
+            return PartialView("_ForgotPasswordPartial", model); // Volver a mostrar la vista con errores
         }
     }
 }

@@ -1,0 +1,110 @@
+﻿@model JMA.Models.Paciente
+<div class="home-section">
+
+<!-- Botones en la parte superior -->
+<div class="form-group">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-danger">Cancelar</a>
+</div>
+
+<form asp-action="Crear" method="post">
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-6 form-group">
+            <label for="Nombre">Nombre</label>
+            <input asp-for="Nombre" id="Nombre" type="text" class="form-control" />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-6 form-group">
+            <label for="Ubicacion">Ubicación</label>
+            <input asp-for="Ubicacion" id="Ubicacion" type="text" class="form-control" />
+            <span asp-validation-for="Ubicacion" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-6 form-group">
+            <label for="FechaEgreso">Fecha de Egreso</label>
+            <input asp-for="FechaEgreso" id="FechaEgreso" type="date" class="form-control" />
+            <span asp-validation-for="FechaEgreso" class="text-danger"></span>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-6 form-group">
+            <label for="Deuda">Deuda</label>
+            <input asp-for="Deuda" id="Deuda" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="Deuda" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-6 form-group">
+            <label for="Genero">Género</label>
+            <select asp-for="Genero" class="form-control">
+                <option value="">Seleccione un género</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <span asp-validation-for="Genero" class="text-danger"></span>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-6 form-group">
+            <label for="Edad">Edad</label>
+            <input asp-for="Edad" id="Edad" type="number" class="form-control" />
+            <span asp-validation-for="Edad" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-6 form-group">
+            <label for="Telefono">Teléfono</label>
+            <input asp-for="Telefono" id="Telefono" type="tel" class="form-control" />
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-6 form-group">
+            <label for="Email">Email</label>
+            <input asp-for="Email" id="Email" type="email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-6 form-group">
+            <label for="Direccion">Dirección</label>
+            <input asp-for="Direccion" id="Direccion" type="text" class="form-control" />
+            <span asp-validation-for="Direccion" class="text-danger"></span>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="col-md-6 form-group">
+            <label for="EstadoSalud">Estado de Salud</label>
+            <select asp-for="EstadoSalud" class="form-control">
+                <option value="">Seleccione el estado de salud</option>
+                <option value="Bueno">Bueno</option>
+                <option value="Regular">Regular</option>
+                <option value="Malo">Malo</option>
+            </select>
+            <span asp-validation-for="EstadoSalud" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-md-6 form-group">
+            <label for="FechaIngreso">Fecha de Ingreso</label>
+            <input asp-for="FechaIngreso" id="FechaIngreso" type="date" class="form-control" />
+            <span asp-validation-for="FechaIngreso" class="text-danger"></span>
+        </div>
+    </div>
+</form>
+</div>

@@ -10,6 +10,10 @@ body{
   overflow: hidden;
 }
 
+.footer p{
+    margin-bottom:0;
+}
+
 .bx-menu:hover{
     cursor:pointer;
 }
@@ -25,6 +29,7 @@ body{
     transition: all 0.5s ease;
     height: calc(100vh - 40px);
     margin-top: 40px;
+    opacity: 1 !important;
     
 }
 
@@ -121,7 +126,6 @@ body{
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: #001348;
     display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
@@ -154,8 +158,7 @@ body{
     top: 0;
     opacity: 1;
     pointer-events: auto;
-    background: #cfd4fd;
-    border: 1px solid #b3baf2;
+    background: #2a3a66;
 }
 .sidebar .nav-links li .sub-menu .link_name{
   display: none;
@@ -172,9 +175,10 @@ body{
   opacity: 0;
   pointer-events: none;
 }
-.sidebar .nav-links li:hover .sub-menu.blank{
-  top: 50%;
-  transform: translateY(-50%);
+.sidebar .nav-links li:hover .sub-menu.blank {
+    top: 50%;
+    transform: translateY(-50%);
+    
 }
 .sidebar .profile-details{
   position: fixed;
