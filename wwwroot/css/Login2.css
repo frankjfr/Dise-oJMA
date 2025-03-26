@@ -1,0 +1,151 @@
+﻿/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    /*background: linear-gradient(to right, #0096FF, #0056B3);*/
+    background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(/img/imgLogin/backgroundLogin.jpg);
+    background-size: cover;
+    color: rgba(0, 0, 0, 0.6);
+}
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        filter: blur(3px);
+        z-index: -1; /* Asegura que el filtro se aplique solo al fondo */
+    }
+
+/* Contenedor del login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Tarjeta del login */
+.login-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+}
+
+/* Título */
+h2 {
+    margin-bottom: 22px;
+    color: #333;
+    padding: 0px;
+    /* margin: 0px; */
+    margin-top: 0px;
+}
+
+/* Campos de entrada */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+    .input-group label {
+        font-size: 14px;
+        color: #555;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+/* Botón */
+.btn {
+    background: #0096FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .btn:hover {
+        background: #0056B3;
+    }
+
+/* Enlace de recuperación */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #0096FF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+    .forgot-password:hover {
+        text-decoration: underline;
+    }
+
+/* Campos de entrada y select */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+    .input-group label {
+        font-size: 14px;
+        color: #555;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 94%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Estilos específicos para el select */
+    .input-group select {
+        appearance: none;
+        background: white;
+        cursor: pointer;
+        width: 100%;
+    }
+
+.form-header {
+    /*max-height: 10vw;*/
+    margin-top: -26px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    /*max-width: 10vw;*/
+    height: 140px;
+}

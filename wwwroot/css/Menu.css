@@ -83,6 +83,7 @@ body{
 }
     .sidebar .nav-links li:hover {
         background: #f8f9fa2b;
+        font-weight: 100;
     }
 .sidebar .nav-links li .iocn-link{
   display: flex;
@@ -139,20 +140,22 @@ body{
     opacity: 0.6;
     transition: all 0.3s ease;
 }
-.sidebar .nav-links li .sub-menu a:hover{
-  opacity: 1;
-}
-.sidebar.close .nav-links li .sub-menu{
-  position: absolute;
-  left: 100%;
-  top: -10px;
-  margin-top: 0;
-  padding: 10px 20px;
-  border-radius: 0 6px 6px 0;
-  opacity: 0;
-  display: block;
-  pointer-events: none;
-  transition: 0s;
+    .sidebar .nav-links li .sub-menu a:hover {
+        opacity: 1;
+        font-weight: 100;
+    }
+.sidebar.close .nav-links li .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+    font-weight: 100;
 }
 .sidebar.close .nav-links li:hover .sub-menu {
     top: 0;
@@ -163,10 +166,11 @@ body{
 .sidebar .nav-links li .sub-menu .link_name{
   display: none;
 }
-.sidebar.close .nav-links li .sub-menu .link_name{
-  font-size: 16px;
-  opacity: 1;
-  display: block;
+.sidebar.close .nav-links li .sub-menu .link_name {
+    font-size: 16px;
+    opacity: 1;
+    display: block;
+    font-weight: 100;
 }
 .sidebar .nav-links li .sub-menu.blank{
   opacity: 1;
@@ -338,13 +342,13 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background: #001348;
+    background: #0247c1;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    border-bottom: 1px solid #b3baf2;
+   /* border-bottom: 1px solid #b3baf2;*/
     z-index: 1000;
     height: 40px;
 }
